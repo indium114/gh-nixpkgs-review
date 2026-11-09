@@ -41,7 +41,7 @@ func main() {
 
 	// run action
 	slag.Hint("dispatching action\n")
-	gh.Exec("workflow", "run", "-R", repo, "review",
+	out, _, _ := gh.Exec("workflow", "run", "-R", repo, "review",
 		"-f", "x86_64-linux=true",
 		"-f", "aarch64-linux=true",
 		"-f", "aarch64-darwin=yes_sandbox_relaxed",
@@ -53,4 +53,7 @@ func main() {
 		"-f", "post-result=true",
 		"-f", "on-success=nothing",
 		"-f", "pr="+pr)
+
+	url := strings.TrimSpace(out.String())
+	slag.Ok("workflow dispatched; vist %s to see its status", url)
 }
