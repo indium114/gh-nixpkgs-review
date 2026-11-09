@@ -23,7 +23,7 @@
           ];
         };
 
-        packages.example = pkgs.buildGoModule {
+        packages.gh-nixpkgs-review = pkgs.buildGoModule {
           pname = "gh-nixpkgs-review";
           version = "0.1.0";
 
@@ -41,9 +41,9 @@
           };
         };
 
-        apps.example = {
+        apps.gh-nixpkgs-review = {
           type = "app";
-          program = "${self.packages.${pkgs.stdenv.hostPlatform.system}.example}/bin/gh-nixpkgs-review";
+          program = "${self.packages.${pkgs.stdenv.hostPlatform.system}.gh-nixpkgs-review}/bin/gh-nixpkgs-review";
         };
       });
 }
