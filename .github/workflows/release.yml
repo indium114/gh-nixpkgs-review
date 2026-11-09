@@ -19,11 +19,7 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version: stable
-      - name: Run GoReleaser
-        uses: goreleaser/goreleaser-action@v7
+      - name: Release
+        uses: cli/gh-extension-precompile@v2
         with:
-          distribution: goreleaser
-          version: "~> v2"
-          args: release --clean
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          go_version_file: go.mod
