@@ -55,5 +55,5 @@ func main() {
 		"-f", "pr="+pr)
 
 	url := strings.TrimSpace(out.String())
-	slag.Ok("workflow dispatched; vist %s to see its status", url)
+	slag.Ok("workflow dispatched; visit %s to see its status", url)
 }
