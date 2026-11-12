@@ -25,7 +25,7 @@
 
         packages.gh-nixpkgs-review = pkgs.buildGoModule {
           pname = "gh-nixpkgs-review";
-          version = "0.1.0";
+          version = "0.1.1";
 
           src = self;
 
