@@ -4,7 +4,7 @@ go 1.26.7
 
 require (
 	github.com/cli/go-gh/v2 v2.17.0
-	github.com/indium114/slag v0.0.0-20260810100020-e19101842b6e
+	github.com/indium114/slag v0.1.3
 )
 
 require (
