@@ -36,7 +36,7 @@
 
           meta = with pkgs.lib; {
             description = "A very small gh extension to provide a more convenient way to use nixpkgs-review-gha";
-            license = licenses.mit;
+            license = licenses.unlicense;
             platforms = platforms.all;
           };
         };
